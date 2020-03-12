@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+  labels:
+    k8s-app/opster.io: metricbeat-opster
+  name: metricbeat-opster
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app/opster.io: metricbeat-opster
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        k8s-app/opster.io: metricbeat-opster
+    spec:
+      containers:
+      - env:
+        - name: OPSTER_TOKEN
+          value: <OPSTER_TOKEN>
+        - name: ES_HOST
+          value: <ES_HOST>
+        - name: ES_PORT
+          value: "9200"
+        - name: ONE_TO_MANY
+          value: "true"
+        - name: LOGSTASH_HOST
+          value: receiver.opster.io
+        image: opsterio/metricbeat-opster:latest
+        imagePullPolicy: Always
+        name: metricbeat-opster
+        resources: {}
+        securityContext:
+          runAsUser: 0
+      restartPolicy: Always
