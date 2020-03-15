@@ -22,19 +22,24 @@ spec:
       containers:
       - env:
         - name: OPSTER_TOKEN
-          value: <OPSTER_TOKEN>
-        - name: ES_HOST
-          value: <ES_HOST>
-        - name: ES_PORT
-          value: "9200"
+          valueFrom:
+            secretKeyRef:
+              name: opster-secret
+              key: opster-token
+        - name: ES_URL
+          valueFrom:
+            secretKeyRef:
+              name: opster-secret
+              key: es-url
         - name: ONE_TO_MANY
           value: "true"
-        - name: LOGSTASH_HOST
+        - name: STATS_PULL_INTERVAL
+          value: "10s"
+        - name: OPSTER_HOST
           value: receiver.opster.io
-        image: opsterio/metricbeat-opster:latest
+        image: opsterio/opster-metricbeat:latest
         imagePullPolicy: Always
         name: metricbeat-opster
-        resources: {}
         securityContext:
           runAsUser: 0
       restartPolicy: Always
