@@ -31,8 +31,8 @@ spec:
             secretKeyRef:
               name: opster-secret
               key: es-url
-        - name: ONE_TO_MANY
-          value: "true"
+        - name: MODE
+          value: ONE_TO_ALL
         - name: STATS_PULL_INTERVAL
           value: "10s"
         - name: OPSTER_HOST
