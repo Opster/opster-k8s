@@ -41,5 +41,5 @@ spec:
         imagePullPolicy: Always
         name: metricbeat-opster
         securityContext:
-          runAsUser: 0
+          runAsUser: 1000
       restartPolicy: Always
