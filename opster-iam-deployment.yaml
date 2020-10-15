@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+  labels:
+    k8s-app/opster.io: metricbeat-opster
+  name: metricbeat-opster
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app/opster.io: metricbeat-opster
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        k8s-app/opster.io: metricbeat-opster
+    spec:
+      containers:
+      - env:
+        - name: OPSTER_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: opster-secret
+              key: opster-token
+        - name: ES_URL
+          valueFrom:
+            secretKeyRef:
+              name: opster-secret
+              key: es-url
+        - name: MODE
+          value: ONE_TO_ALL
+        - name: STATS_PULL_INTERVAL
+          value: "10s"
+        - name: ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              key: access-key-id
+              name: opster-secret
+        - name: SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              key: secret-access-key
+              name: opster-secret
+        - name: AWS_REGION
+          valueFrom:
+            secretKeyRef:
+              key: aws-region
+              name: opster-secret          
+        - name: OPSTER_HOST
+          value: receiver.opster.io
+        image: opsterio/opster-metricbeat:latest
+        imagePullPolicy: Always
+        name: metricbeat-opster
+        securityContext:
+          runAsUser: 1000
+      restartPolicy: Always
