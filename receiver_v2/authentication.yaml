@@ -46,7 +46,7 @@ spec:
         - name: STATS_PULL_INTERVAL
           value: "10s"
         - name: OPSTER_HOST
-          value: receiver-v2.opster.io
+          value: "receiver-v2.opster.io:9091"
         image: opsterio/opster-metricbeat:latest
         imagePullPolicy: Always
         name: metricbeat-opster
