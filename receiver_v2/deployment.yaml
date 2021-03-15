@@ -37,6 +37,8 @@ spec:
           value: "10s"
         - name: OPSTER_HOST
           value: "receiver-v2.opster.io:9091"
+        - name: MAX_MSG_SIZE
+          value: 20971520
         image: opsterio/opster-metricbeat:latest
         imagePullPolicy: Always
         name: metricbeat-opster
