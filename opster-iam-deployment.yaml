@@ -51,7 +51,10 @@ spec:
               key: aws-region
               name: opster-secret          
         - name: OPSTER_HOST
-          value: receiver.opster.io
+          valueFrom:
+            secretKeyRef:
+              name: opster-secret
+              key: opster-host
         image: opsterio/opster-metricbeat:latest
         imagePullPolicy: Always
         name: metricbeat-opster
