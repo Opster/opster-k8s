@@ -31,6 +31,16 @@ spec:
             secretKeyRef:
               name: opster-secret
               key: es-url
+        - name: ES_USER
+          valueFrom:
+            secretKeyRef:
+              name: opster-secret
+              key: es-user
+        - name: ES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: opster-secret
+              key: es-password
         - name: MODE
           value: ONE_TO_ALL
         - name: STATS_PULL_INTERVAL
