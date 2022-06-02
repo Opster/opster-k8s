@@ -1,0 +1,20 @@
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="https://api.coralogix.com/saml/metadata.xml" validUntil="2022-06-01T15:25:19.007Z">
+    <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>MIIC4jCCAcoCCQDo/xJNiuWitTANBgkqhkiG9w0BAQsFADAzMRIwEAYDVQQKDAlDb3JhbG9naXgxHTAbBgNVBAMMFFNBTUwgU1NPIENlcnRpZmljYXRlMB4XDTIyMDUyNTA3NTQwMloXDTIzMDUyNTA3NTQwMlowMzESMBAGA1UECgwJQ29yYWxvZ2l4MR0wGwYDVQQDDBRTQU1MIFNTTyBDZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKeTRA3lRNXyaZtzIaDvaA1Vx4B4qOPRF+795pY4UICzPvSScJFDqLcaxw2jpgrJ+sGCalo2V/2tvTX2rxke/qw0W+91dhgCbgZZRORNdAUBtK6wVX4fpB3tSVf/X14diazkYX6Tt9JV36WOB/Dg91YsAqsbdSHJe8okJ9eodCFoL4tZrVC8+C2n2mdz9KsYBo8BhMl9arR5oxxX2rL22oBZ7/5yqXKt1Z0664HPw5aAoP6jhpiAR69r84RI9ijtViErtc3u1JptYIDNMb6FeSxx2CsoHrotasUWdq5j3Ly9ymIxWyfTmAJnk40tGLb58C2JkFZNy1rJ/qdmexpRAckCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEATss02zH8++u3nzm0BkQXrScjs+YN0OA29hYl/TWidgi/yoB4vrY0SVChvvJwDEGUGOsbvijrfFWauJG4kmITN8rSkzhqhn9XeulLdms59M4tX+zgudl6QwPuUXWyAGHxC3aAbT56wVakzgMO4jNAbZLEXem6+v7rEBGftPNHS9s+VX6YMT+qDO4VMNNlwMWwhUkPsSHh/gU174p276yRUacoZmc1h/OI0AjDIXKGLlFwW2ZnwdSgJMdvSr8Y7Env6u7mcqlObtAzU93Zj6cXifkt90KEljLyW5775CnAP4ENeBQ6Udv54xLlVzi6RFpajfS0vXb31ncvoQWzmiAGsQ==</ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:KeyDescriptor use="encryption">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>MIIC4jCCAcoCCQDo/xJNiuWitTANBgkqhkiG9w0BAQsFADAzMRIwEAYDVQQKDAlDb3JhbG9naXgxHTAbBgNVBAMMFFNBTUwgU1NPIENlcnRpZmljYXRlMB4XDTIyMDUyNTA3NTQwMloXDTIzMDUyNTA3NTQwMlowMzESMBAGA1UECgwJQ29yYWxvZ2l4MR0wGwYDVQQDDBRTQU1MIFNTTyBDZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKeTRA3lRNXyaZtzIaDvaA1Vx4B4qOPRF+795pY4UICzPvSScJFDqLcaxw2jpgrJ+sGCalo2V/2tvTX2rxke/qw0W+91dhgCbgZZRORNdAUBtK6wVX4fpB3tSVf/X14diazkYX6Tt9JV36WOB/Dg91YsAqsbdSHJe8okJ9eodCFoL4tZrVC8+C2n2mdz9KsYBo8BhMl9arR5oxxX2rL22oBZ7/5yqXKt1Z0664HPw5aAoP6jhpiAR69r84RI9ijtViErtc3u1JptYIDNMb6FeSxx2CsoHrotasUWdq5j3Ly9ymIxWyfTmAJnk40tGLb58C2JkFZNy1rJ/qdmexpRAckCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEATss02zH8++u3nzm0BkQXrScjs+YN0OA29hYl/TWidgi/yoB4vrY0SVChvvJwDEGUGOsbvijrfFWauJG4kmITN8rSkzhqhn9XeulLdms59M4tX+zgudl6QwPuUXWyAGHxC3aAbT56wVakzgMO4jNAbZLEXem6+v7rEBGftPNHS9s+VX6YMT+qDO4VMNNlwMWwhUkPsSHh/gU174p276yRUacoZmc1h/OI0AjDIXKGLlFwW2ZnwdSgJMdvSr8Y7Env6u7mcqlObtAzU93Zj6cXifkt90KEljLyW5775CnAP4ENeBQ6Udv54xLlVzi6RFpajfS0vXb31ncvoQWzmiAGsQ==</ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://0fa1-87-68-212-229.ngrok.io/login/sso/saml/init"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://0fa1-87-68-212-229.ngrok.io/login/sso/saml/init" index="0"/>
+    </md:SPSSODescriptor>
+</md:EntityDescriptor>
