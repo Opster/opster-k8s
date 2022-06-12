@@ -14,7 +14,7 @@
                 </ds:X509Data>
             </ds:KeyInfo>
         </md:KeyDescriptor>
-        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://0fa1-87-68-212-229.ngrok.io/login/sso/saml/init"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://0fa1-87-68-212-229.ngrok.io/login/sso/saml/init" index="0"/>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://71bb-46-121-211-103.ngrok.io/login/sso/saml/init"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://71bb-46-121-211-103.ngrok.io/login/sso/saml/init" index="0"/>
     </md:SPSSODescriptor>
 </md:EntityDescriptor>
