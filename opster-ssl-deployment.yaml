@@ -50,7 +50,7 @@ spec:
             secretKeyRef:
               name: opster-secret
               key: opster-host
-        image: opsterio/opster-metricbeat:latest
+        image: public.ecr.aws/opsterio/opster-metricbeat:latest
         imagePullPolicy: Always
         name: metricbeat-opster
         securityContext:
