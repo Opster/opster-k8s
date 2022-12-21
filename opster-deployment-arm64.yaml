@@ -40,6 +40,11 @@ spec:
             secretKeyRef:
               name: opster-secret
               key: opster-host
+        - name: OPSTER_PORT
+          valueFrom:
+            secretKeyRef:
+              name: opster-secret
+              key: opster-port
         image: public.ecr.aws/opsterio/opster-metricbeat:arm64-latest
         imagePullPolicy: Always
         name: metricbeat-opster
