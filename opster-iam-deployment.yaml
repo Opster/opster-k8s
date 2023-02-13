@@ -31,10 +31,6 @@ spec:
             secretKeyRef:
               name: opster-secret
               key: es-url
-        - name: MODE
-          value: ONE_TO_ALL
-        - name: STATS_PULL_INTERVAL
-          value: "10s"
         - name: ACCESS_KEY_ID
           valueFrom:
             secretKeyRef:
@@ -50,11 +46,6 @@ spec:
             secretKeyRef:
               key: aws-region
               name: opster-secret          
-        - name: OPSTER_HOST
-          valueFrom:
-            secretKeyRef:
-              name: opster-secret
-              key: opster-host
         - name: OPSTER_PORT
           valueFrom:
             secretKeyRef:
