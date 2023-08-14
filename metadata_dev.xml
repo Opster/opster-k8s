@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://raw.githubusercontent.com/opster/opster-k8s/master/metadata_dev.xml" validUntil="2027-05-16T19:17:26.000Z">
+  <md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIIDdDCCAlygAwIBAgIGAYDTdCk9MA0GCSqGSIb3DQEBCwUAMHsxFDASBgNVBAoTC0dvb2dsZSBJ
+bmMuMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MQ8wDQYDVQQDEwZHb29nbGUxGDAWBgNVBAsTD0dv
+b2dsZSBGb3IgV29yazELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWEwHhcNMjIwNTE3
+MTkxNzI2WhcNMjcwNTE2MTkxNzI2WjB7MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEWMBQGA1UEBxMN
+TW91bnRhaW4gVmlldzEPMA0GA1UEAxMGR29vZ2xlMRgwFgYDVQQLEw9Hb29nbGUgRm9yIFdvcmsx
+CzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAnkWsg3De1dOqi3rEht7i6qFxQLpGXu13yjsJe9cfTpeJL1KQ46xdv6HTwi+FsANO
+lHR6FGUmYGCspqXVYBUCCi0jmzKZPXcIzkdsFWSIliwPkHg/5eVILRrQkDzFcDpN3UDCKILs/8lK
+9m7rjcFdqOUfVf8BTDtcqJxul5K1gLoSP1Ksut80afKzMuGWLVUxsoAJ43jpQN8YylQ7uCy9PtJz
+vRwqKyTpUg5fxezqekEWeKJPXq+7BpOB1VM2JWqpnAYtrkwUjREFtp14y24L/PoP6rP+aZ0TbdW7
+kiiydeR8xRG2eHZ5JxTmg5lqe3uS1C5zWjShb4D1sXdpDndHvQIDAQABMA0GCSqGSIb3DQEBCwUA
+A4IBAQB/NDvMzye9ETv2YZ6qFkRv2xH15SPwgZlC1d3OQXJODqJ/AyVXgKPZtKXy4qpHtpesXCvy
+EEDCgwH3hp8o6cjKTnEnETd6CnqYH2Pu+sWexvaV3xuXog75j1aeDIx4uQeB7KwLQ7mUpCTguUbx
+jDvdBlRMqmoALejRpjkpjA9NoOqSjUhSBdXMzchtTTlRZmNOEVGYBhFKMIocYBIgFwc/UxVjY24e
+JLbqpOoj4BJ8ignfs0ohB7Kbq3SiIBWjBkfo936kz/ELcmm+T5FA3TleAbyWONNcRJ8p+VJt6IZC
+IJC2bdLycOYnHiB+uJSjKKGZv2+39aaiHA3h0pFxg4hp</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://api.opster.co/login/sso/saml/init"/>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.opster.co/login/sso/saml/init"/>
+  </md:IDPSSODescriptor>
+</md:EntityDescriptor>
